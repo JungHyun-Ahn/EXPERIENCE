@@ -1,0 +1,12 @@
+input[type=checkbox]:checked + div {
+  height: 0;
+}
+
+div {
+  width: 500px; height: 200px;
+  overflow: hidden;
+  transition: 1s;
+
+  background-color: antiquewhite;
+}
+
