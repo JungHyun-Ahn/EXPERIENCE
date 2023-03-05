@@ -1,0 +1,212 @@
+/* 초기값 */
+* {
+  margin: 0; padding: 0;
+}
+
+body{
+  font-family: 'Noto Sans KR', sans-serif;
+}
+li {
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  color: #000;
+}
+img {
+  border: 0;
+}
+/* 초기값 : end */
+
+/* header :start */
+header#main_header { 
+  background-color: aliceblue;
+  width: 960px; height: 180px;
+  margin: 0 auto;
+
+  position: relative;
+  margin-bottom: 10px;
+}
+
+header#main_header > #title { 
+  position: absolute;
+  top: 50px; left: 30px;
+}
+
+header#main_header #main_gnb, header#main_header #main_lnb { 
+  overflow: hidden;
+}
+
+header#main_header #main_gnb { 
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+header#main_header #main_lnb { 
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+#main_gnb li { 
+  float: left;
+}
+
+#main_gnb li > a {
+  display: block;
+  padding: 4px 8px;
+  border: 1px solid #000;
+}
+
+#main_gnb li:hover a{
+  background-color: #000;
+  color: #fff;
+}
+
+#main_gnb li:first-child > a { 
+  border-radius: 30px 0 0 30px;
+}
+
+#main_gnb li:last-child > a { 
+  border-radius: 0 30px 30px 0;
+}
+
+#main_lnb li { 
+  float: left;
+}
+
+#main_lnb li > a {
+  display: block;
+  padding: 8px 15px;
+  border: 1px solid #000;
+}
+
+#main_lnb li:hover a{
+  background-color: #000;
+  color: #fff;
+}
+
+#main_lnb li:first-child > a { 
+  border-radius: 30px 0 0 30px;
+}
+
+#main_lnb li:last-child > a { 
+  border-radius: 0 30px 30px 0;
+}
+/* header :end */
+
+
+/* #content :start */
+#content {
+  width: 960px;
+  margin: 0 auto;
+
+  overflow: hidden;
+}
+
+#content > section#main_section { 
+  background-color: azure;
+
+  width: 750px; 
+  margin-right: 10px;
+  float: left;
+}
+
+section#main_section > article.main_article { 
+  border: 1px solid #000;
+  margin-bottom: 10px;
+  padding: 15px;
+}
+
+section#main_section > article.main_article > h1 {
+  margin-bottom: 10px;
+}
+
+#content > aside#main_aside {
+  background-color: beige;
+
+  width: 200px;
+  float: left;
+}
+
+aside#main_aside > input { 
+  display: none;
+}
+
+aside#main_aside > input:nth-of-type(1):checked ~ section.buttons label:nth-child(1) {
+  background-color: #000;
+  color: #fff;
+}
+
+aside#main_aside > input:nth-of-type(2):checked ~ section.buttons label:nth-child(2) {
+  background-color: #000;
+  color: #fff;
+}
+
+aside#main_aside > section.buttons {
+  overflow: hidden;
+}
+
+aside#main_aside > section.buttons > label {
+  width: 100px; height: 40px;
+  float: left;
+
+  border: 1px solid #000;
+  box-sizing: border-box;
+  text-align: center; line-height: 40px;
+}
+
+div.tab_item li.item { 
+  padding: 10px;
+  border: 1px solid #000;
+  border-top: none;
+
+  /* 왜 li.item a에 넣으면 작동이 안될까 */
+  overflow: hidden;
+}
+
+div.tab_item li.item div.thumbnail {
+  margin-right: 10px;
+  float: left;
+}
+
+li.item div.description { 
+  width: 120px;
+  float: left;
+
+  /* width 값(제한)이 있어야 작동이 되는듯 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* nth-child와 nth-of-type 차이 잘 알기 */
+/* nth-child : 부모의 자식인데 동시에 몇번째  자식놈인가? */
+/* nth-child 부모의 자식인데 같은 tag 자식 중 몇번째 자식놈인가? */
+div.tab_item:nth-of-type(1), div.tab_item:nth-of-type(2) {
+  display: none;
+}
+
+aside#main_aside > input:nth-of-type(1):checked ~ div.tab_item:nth-of-type(1) {
+  display: block;
+}
+
+aside#main_aside > input:nth-of-type(2):checked ~ div.tab_item:nth-of-type(2) {
+  display: block;
+}
+/* #content :end */
+
+/* footer :start */
+  footer#main_footer {
+
+    width: 960px;
+    margin: 0 auto 30px;
+    padding: 15px 0;
+    border: 1px solid #000;
+    
+    text-align: center;
+  }
+
+/* footer :end */
