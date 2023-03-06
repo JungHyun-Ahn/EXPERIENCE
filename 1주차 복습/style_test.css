@@ -184,7 +184,7 @@ li.item div.description {
 
 /* nth-child와 nth-of-type 차이 잘 알기 */
 /* nth-child : 부모의 자식인데 동시에 몇번째  자식놈인가? */
-/* nth-child 부모의 자식인데 같은 tag 자식 중 몇번째 자식놈인가? */
+/* nth-of-child 부모의 자식인데 같은 tag 자식 중 몇번째 자식놈인가? */
 div.tab_item:nth-of-type(1), div.tab_item:nth-of-type(2) {
   display: none;
 }
