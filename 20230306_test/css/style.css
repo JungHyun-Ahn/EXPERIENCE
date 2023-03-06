@@ -1,0 +1,80 @@
+/* 초기값 */
+* {
+  margin: 0; padding: 0;
+}
+body {
+  font-family: 'Nanum Gothic', sans-serif;
+}
+li { 
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+/* 초기값 : end */
+
+/* 본문 style */
+#container {
+  width: 900px; height: 900px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+
+  margin: 20px auto;
+  padding: 15px 40px;
+}
+
+#container form {
+  margin-left: 45px;
+}
+
+/* 메뉴 타이틀 style */
+h1, p, hr { 
+  text-align: center;
+  margin-top: 25px;
+}
+
+mark {
+  font-size: 1.2em;
+  /* 기존 사이즈의 1.2배 */
+}
+
+/* 메뉴 본문 스타일 */
+h3 {
+  margin-top: 38px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+form li {
+  padding-left: 50px;
+}
+
+label.info {
+  width: 62px;
+  /* !!!틀린거!!! */
+  /* label에 width값을 줘서 input의 왼쪽 위치기 같도록 한다 */
+}
+
+label, input {
+  display: inline-block;
+  /* inline 태그니까 width값 주려고 display 설정 */
+  font-size: 18px;
+  margin-left: 8px;
+  margin-bottom: 14px;
+}
+
+
+/* 버튼 style */
+.buttons {
+  text-align: center;
+}
+
+.buttons > input {
+  width: 180px; height: 35px;
+  margin: 10px;
+
+  border: 0;
+  box-shadow: 1px 1px 2px gainsboro;
+  /* box-shadow : 오른쪽 기준 얼마나 떨어지냐 / 아래 기준으로 얼마나 떨어지냐 / 그림자가 얼마나 커질거냐 / 그림자 색 */
+}
+
